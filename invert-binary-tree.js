@@ -20,7 +20,7 @@ const tree = {
   },
 };
 
-function searchOnBinaryTree(tree) {
+function invertOnBinaryTree(tree) {
   if (tree) {
     let left = tree.left;
     let right = tree.right;
@@ -32,12 +32,12 @@ function searchOnBinaryTree(tree) {
       tree.right = left;
     }
 
-    searchOnBinaryTree(tree.left);
-    searchOnBinaryTree(tree.right);
+    invertOnBinaryTree(tree.left);
+    invertOnBinaryTree(tree.right);
   }
 
   return tree;
 }
 
-const result = searchOnBinaryTree(tree);
+const result = invertOnBinaryTree(tree);
 console.log(result);
